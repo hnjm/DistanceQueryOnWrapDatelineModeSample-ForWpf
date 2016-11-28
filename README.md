@@ -2,7 +2,7 @@
 
 ### Description
 
-                In this Wpf sample is on the same theme as the previous sample WrapDatelineMode. Here we show how to take advantage of the projection class WrapDatelineProjection for doing spatial query when on a “virtual map”. From this spatial query example, the developer should understand how the same principle using the same projection class can be applied for other operations such as Spatial Queries, Identify etc. In order to run this sample, you will need the latest Dev Daily Build for Wpf with references to MapSuiteCore.dll and WpfDesktopEdition.dll.
+In this Wpf sample is on the same theme as the previous sample WrapDatelineMode. Here we show how to take advantage of the projection class WrapDatelineProjection for doing spatial query when on a “virtual map”. From this spatial query example, the developer should understand how the same principle using the same projection class can be applied for other operations such as Spatial Queries, Identify etc. In order to run this sample, you will need the latest Dev Daily Build for Wpf with references to MapSuiteCore.dll and WpfDesktopEdition.dll.
               
 
 ![Screenshot](https://github.com/ThinkGeo/DistanceQueryOnWrapDatelineModeSample-ForWpf/blob/master/ScreenShot.png)
