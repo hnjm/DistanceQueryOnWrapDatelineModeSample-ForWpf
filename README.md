@@ -1,4 +1,4 @@
-# DistanceQueryOnWrapDatelineModeSample-ForWpf
+# #  Distance Query On Wrap Dateline Mode Sample  for Wpf
 
 ### Description
 
