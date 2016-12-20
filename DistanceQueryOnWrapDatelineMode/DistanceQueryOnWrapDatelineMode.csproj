@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -14,10 +14,8 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
+    <FileUpgradeFlags></FileUpgradeFlags>
+    <UpgradeBackupLocation></UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -86,32 +84,24 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="ThinkGeo.MapSuite, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-<<<<<<< 9c544a4040d2d999fc665aa2bfab9053db5dc6e4
-      <HintPath>..\packages\ThinkGeo.MapSuite.10.0.344.6\lib\net45\ThinkGeo.MapSuite.dll</HintPath>
+      <HintPath>..\packages\ThinkGeo.MapSuite.10.0.0\lib\net45\ThinkGeo.MapSuite.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ThinkGeo.MapSuite.Layers.ShapeFile, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.ShapeFile.10.0.344.6\lib\net45\ThinkGeo.MapSuite.Layers.ShapeFile.dll</HintPath>
+      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.ShapeFile.10.0.0\lib\net45\ThinkGeo.MapSuite.Layers.ShapeFile.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ThinkGeo.MapSuite.Wpf, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MapSuiteDesktopForWpf-BareBone.10.0.344.6\lib\net45\ThinkGeo.MapSuite.Wpf.dll</HintPath>
-=======
-      <HintPath>..\packages\ThinkGeo.MapSuite.10.0.344.6\lib\net45\ThinkGeo.MapSuite.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="ThinkGeo.MapSuite.Layers.ShapeFile, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.ShapeFile.10.0.344.6\lib\net45\ThinkGeo.MapSuite.Layers.ShapeFile.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="ThinkGeo.MapSuite.Wpf, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MapSuiteDesktopForWpf-BareBone.10.0.344.6\lib\net45\ThinkGeo.MapSuite.Wpf.dll</HintPath>
->>>>>>> 98825f05d1eb18f7fa36a2e2b3bcebfa766ece99
+      <HintPath>..\packages\MapSuiteDesktopForWpf-BareBone.10.0.0\lib\net45\ThinkGeo.MapSuite.Wpf.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="ThinkGeo.MapSuite.ProductCenter, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ThinkGeo.MapSuite.ProductCenter.10.0.0\lib\net45\ThinkGeo.MapSuite.ProductCenter.exe</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
