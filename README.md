@@ -4,6 +4,8 @@
 
 This WPF sample shows how to take advantage of the projection class **WrapDatelineProjection** for doing spatial queries when on a “virtual map”. From this spatial query example, the developer should understand how the same principle using the same projection class can be applied for other operations such as Spatial Queries, Identify, etc.               
 
+Please refer to [Wiki](http://wiki.thinkgeo.com/wiki/map_suite_desktop_for_wpf) for the details.
+
 ![Screenshot](https://github.com/ThinkGeo/DistanceQueryOnWrapDatelineModeSample-ForWpf/blob/master/ScreenShot.png)
 
 ### Requirements
@@ -17,11 +19,11 @@ Working...
 
 ### Getting Help
 
-[Map Suite Wpf Wiki Resources](http://wiki.thinkgeo.com/wiki/map_suite_wpf_desktop_edition)
+[Map Suite Wpf Wiki Resources](http://wiki.thinkgeo.com/wiki/map_suite_desktop_for_wpf)
 
-[Map Suite Wpf Product Description](http://thinkgeo.com/map-suite-developer-gis/wpf-edition/)
+[Map Suite Wpf Product Description](https://thinkgeo.com/ui-controls#desktop-platforms)
 
-[ThinkGeo Community Site](http://community.thinkgeo.com/c/map-suite-wpf-desktop-edition-support)
+[ThinkGeo Community Site](http://community.thinkgeo.com/)
 
 [ThinkGeo Web Site](http://www.thinkgeo.com)
 
