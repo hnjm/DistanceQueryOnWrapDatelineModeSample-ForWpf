@@ -24,15 +24,17 @@ namespace DistanceQueryOnWrapDatelineMode
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //Sets the correct map unit 
-            wpfMap1.MapUnit = GeographyUnit.DecimalDegree;
+            wpfMap1.MapUnit = GeographyUnit.Meter;
+            wpfMap1.ZoomLevelSet = ThinkGeoCloudMapsOverlay.GetZoomLevelSet();
             //Sets the map extent in real coordinates.
-            wpfMap1.CurrentExtent = new RectangleShape(-326,82,-58,-91);
+            wpfMap1.CurrentExtent = new RectangleShape(-14440660, 12417042, 16006959, -9812068);
             wpfMap1.Background = new SolidColorBrush(Color.FromRgb(148, 196, 243));
 
-            WorldMapKitWmsWpfOverlay worldMapKitWmsWpfOverlay = new WorldMapKitWmsWpfOverlay();
+            // Add ThinkGeoCloudMapsOverlay as basemap
+            ThinkGeoCloudMapsOverlay baseOverlay = new ThinkGeoCloudMapsOverlay();
             //Sets the WrapDatelineMode to WrapDateline for the overlay.
-            worldMapKitWmsWpfOverlay.WrappingMode = WrappingMode.WrapDateline;
-            wpfMap1.Overlays.Add("WMK",worldMapKitWmsWpfOverlay);
+            baseOverlay.WrappingMode = WrappingMode.WrapDateline;
+            wpfMap1.Overlays.Add("WMK", baseOverlay);
 
             //InMemoryFeatureLayer to put the feature as the result of the spatial query.
             InMemoryFeatureLayer inMemoryFeatureLayer = new InMemoryFeatureLayer();
@@ -84,15 +86,14 @@ namespace DistanceQueryOnWrapDatelineMode
                 wpfMap1.Refresh(dynamicOverlay);
             }
             catch { }
-            finally { }
         }
 
-       
         private void wpfMap1_MouseMove(object sender, MouseEventArgs e)
         {
+
             //Gets the PointShape in world coordinates from screen coordinates.
             Point point = e.MouseDevice.GetPosition(null);
-            
+
             ScreenPointF screenPointF = new ScreenPointF((float)point.X, (float)point.Y);
             PointShape pointShape = ExtentHelper.ToWorldCoordinate(wpfMap1.CurrentExtent, screenPointF, (float)wpfMap1.Width, (float)wpfMap1.Height);
 
@@ -109,18 +110,13 @@ namespace DistanceQueryOnWrapDatelineMode
             try
             {
                 //Shows the real coordinates.
-                textBox1.Text = "real X: " + string.Format("{0:0.00}", System.Math.Round(pointShape.X, 2)) +
-                             "  real Y: " + string.Format("{0:0.00}", System.Math.Round(pointShape.Y, 2));
-                //Shows the decimal degrees after the WrapDatelineProjection
-                textBox2.Text = "Decimal Degree X: " + string.Format("{0:0.00}", System.Math.Round(projVertex.X, 2)) +
-                             " Decimal Degree Y: " + string.Format("{0:0.00}", System.Math.Round(projVertex.Y, 2));
-                //Shows the Decimal Minutes Seconds format after the WrapDatelineProjection
-                textBox3.Text = "Long.: " + DecimalDegreesHelper.GetDegreesMinutesSecondsStringFromDecimalDegree(projVertex.X) +
-                              "  Lat.: " + DecimalDegreesHelper.GetDegreesMinutesSecondsStringFromDecimalDegree(projVertex.Y);
+                textBox1.Text = "real X: " + string.Format("{0}", System.Math.Round(pointShape.X)) +
+                             "  real Y: " + string.Format("{0}", System.Math.Round(pointShape.Y));
+                //Shows the Long Lat after the WrapDatelineProjection
+                textBox3.Text = "Long.: " + System.Math.Round(projVertex.X) +
+                              "  Lat.: " + System.Math.Round(projVertex.Y);
             }
             catch { }
-            finally { }
-
-            }
-      }
+        }
+    }
 }

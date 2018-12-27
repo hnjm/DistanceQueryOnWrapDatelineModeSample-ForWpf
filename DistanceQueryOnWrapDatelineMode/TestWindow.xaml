@@ -6,8 +6,7 @@
         Loaded="Window_Loaded" >
     <Grid Height="568">
         <my:WpfMap Name="wpfMap1" Width="778" Height="568" MouseMove="wpfMap1_MouseMove" MapClick="wpfMap1_MapClick" />
-        <TextBox Height="31.108" Margin="0,0,0,-19.998" Name="textBox1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="165" />
-        <TextBox Height="31.108" Margin="171,0,317,-19.998" Name="textBox2" VerticalAlignment="Bottom" />
-        <TextBox Height="31.108" Margin="0,0,95,-19.998" Name="textBox3" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="216" />
+        <TextBox Height="31.108" Margin="0,0,0,-19.998" Name="textBox1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="265" />
+        <TextBox Height="31.108" Margin="0,0,95,-19.998" Name="textBox3" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="316" />
     </Grid>
 </Window>
