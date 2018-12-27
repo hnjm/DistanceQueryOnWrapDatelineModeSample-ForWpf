@@ -6,7 +6,7 @@ This WPF sample shows how to take advantage of the projection class **WrapDateli
 
 Please refer to [Wiki](http://wiki.thinkgeo.com/wiki/map_suite_desktop_for_wpf) for the details.
 
-![Screenshot](https://github.com/ThinkGeo/DistanceQueryOnWrapDatelineModeSample-ForWpf/blob/master/ScreenShot.png)
+![Screenshot](https://github.com/ThinkGeo/DistanceQueryOnWrapDatelineModeSample-ForWpf/blob/master/Screenshot.gif)
 
 ### Requirements
 This sample makes use of the following NuGet Packages

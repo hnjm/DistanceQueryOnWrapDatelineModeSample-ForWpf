@@ -95,7 +95,7 @@ namespace DistanceQueryOnWrapDatelineMode
             Point point = e.MouseDevice.GetPosition(null);
 
             ScreenPointF screenPointF = new ScreenPointF((float)point.X, (float)point.Y);
-            PointShape pointShape = ExtentHelper.ToWorldCoordinate(wpfMap1.CurrentExtent, screenPointF, (float)wpfMap1.Width, (float)wpfMap1.Height);
+            PointShape pointShape = ExtentHelper.ToWorldCoordinate(wpfMap1.CurrentExtent, screenPointF, (float)wpfMap1.ActualWidth, (float)wpfMap1.ActualHeight);
 
             //Uses the WrapDatelineProjection to get the proper decimal degree value on the virtual maps to the right and left of the central map.
             WrapDatelineProjection wrapDatelineProjection = new WrapDatelineProjection();
