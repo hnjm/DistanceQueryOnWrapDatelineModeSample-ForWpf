@@ -25,13 +25,17 @@ namespace DistanceQueryOnWrapDatelineMode
         {
             //Sets the correct map unit 
             wpfMap1.MapUnit = GeographyUnit.Meter;
-            wpfMap1.ZoomLevelSet = ThinkGeoCloudMapsOverlay.GetZoomLevelSet();
+            wpfMap1.ZoomLevelSet = new ThinkGeoCloudMapsZoomLevelSet();
             //Sets the map extent in real coordinates.
             wpfMap1.CurrentExtent = new RectangleShape(-14440660, 12417042, 16006959, -9812068);
             wpfMap1.Background = new SolidColorBrush(Color.FromRgb(148, 196, 243));
 
-            // Add ThinkGeoCloudMapsOverlay as basemap
-            ThinkGeoCloudMapsOverlay baseOverlay = new ThinkGeoCloudMapsOverlay();
+            /*===========================================
+               Backgrounds for this sample are powered by ThinkGeo Cloud Maps and require
+               a Client ID and Secret. These were sent to you via email when you signed up
+               with ThinkGeo, or you can register now at https://cloud.thinkgeo.com.
+            ===========================================*/
+            ThinkGeoCloudRasterMapsOverlay baseOverlay = new ThinkGeoCloudRasterMapsOverlay();
             //Sets the WrapDatelineMode to WrapDateline for the overlay.
             baseOverlay.WrappingMode = WrappingMode.WrapDateline;
             wpfMap1.Overlays.Add("WMK", baseOverlay);
