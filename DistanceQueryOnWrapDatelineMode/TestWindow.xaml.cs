@@ -1,4 +1,10 @@
-﻿using System.Collections.ObjectModel;
+﻿/*===========================================
+    Backgrounds for this sample are powered by ThinkGeo Cloud Maps and require
+    a Client ID and Secret. These were sent to you via email when you signed up
+    with ThinkGeo, or you can register now at https://cloud.thinkgeo.com.
+===========================================*/
+
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -30,12 +36,8 @@ namespace DistanceQueryOnWrapDatelineMode
             wpfMap1.CurrentExtent = new RectangleShape(-14440660, 12417042, 16006959, -9812068);
             wpfMap1.Background = new SolidColorBrush(Color.FromRgb(148, 196, 243));
 
-            /*===========================================
-               Backgrounds for this sample are powered by ThinkGeo Cloud Maps and require
-               a Client ID and Secret. These were sent to you via email when you signed up
-               with ThinkGeo, or you can register now at https://cloud.thinkgeo.com.
-            ===========================================*/
-            ThinkGeoCloudRasterMapsOverlay baseOverlay = new ThinkGeoCloudRasterMapsOverlay();
+            // Please input your ThinkGeo Cloud Client ID / Client Secret to enable the background map. 
+            ThinkGeoCloudRasterMapsOverlay baseOverlay = new ThinkGeoCloudRasterMapsOverlay("ThinkGeo Cloud Client ID", "ThinkGeo Cloud Client Secret");
             //Sets the WrapDatelineMode to WrapDateline for the overlay.
             baseOverlay.WrappingMode = WrappingMode.WrapDateline;
             wpfMap1.Overlays.Add("WMK", baseOverlay);
